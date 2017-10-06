@@ -7,7 +7,6 @@ import sys
 
 #padding generation
 
-BS = 16
 
 
 def padding(inputfile):
@@ -43,11 +42,6 @@ def padding(inputfile):
     for block in textblock:
         paddedstring += block
     return paddedstring
-
-
-
-
-
 
 def Xoring(a,b):
     c=int(a,16)^int(b,16)
@@ -85,7 +79,7 @@ if __name__ == "__main__":
     BS = AES.block_size
     cipher=CBC_ENC(inputFile,IV,KEY,BS)
     print cipher
-    f_cipher= open('cipherText','wb')
+    f_cipher= open('outPutfile_cbc','wb')
     f_cipher.write(cipher)
     f_cipher.close()
 

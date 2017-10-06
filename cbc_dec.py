@@ -5,7 +5,6 @@ from Crypto.Cipher import AES
 from Crypto import Random
 
 
-BS = 32
 
 def unpadding(rawplaintext):
     listofplaintextblock = []
@@ -57,14 +56,14 @@ def CBCdecrypt(IV,cipher,key,BS):
 if __name__ == "__main__":
     f_key = open('keyFile2', 'r')
     KEY = f_key.read()
-    f_cipher = open('cipherText', 'r')
+    f_cipher = open('outPutfile_cbc', 'r')
     cipher = f_cipher.read()
     BS = 32
     f_IV = open('IV','r')
     IV = f_IV.read()
     plaint = CBCdecrypt(IV, cipher, KEY, BS)
 
-    ooo = open("recover", "wb+")
+    ooo = open("text_cbc", "wb+")
     ooo.write(unpadding(plaint))
     ooo.close()
     # print plaint
