@@ -8,5 +8,9 @@ The 'inputfile' is my plaintext file for the executable file, the 'key' is also 
 The 'IV' is the Initial vector for the two mode. 
 The keyFile 1,2 and testFile1,2,3 are sample given from professor.
 
+To execute the source code, a user should type command into terminal as shown below:
+
+python codefilename -i inputfile -o outputfile -k keyfile -v IV file
+
 The text_cbc and text_ctr are the output testfile from cbc_dec and ctr_dec, these two files are come from testFile1 and keyfile1.
 
